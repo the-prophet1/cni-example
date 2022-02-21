@@ -8,38 +8,36 @@ import (
 )
 
 func Add(args *skel.CmdArgs) error {
-	log.Write("进入到 cmdAdd")
-	log.Write(
-		"这里的 CmdArgs 是: ", "ContainerID: ", args.ContainerID,
-		"Netns: ", args.Netns,
-		"IfName: ", args.IfName,
-		"Args: ", args.Args,
-		"Path: ", args.Path,
-		"StdinData: ", string(args.StdinData))
+	log.Write("进入到 cmdCheck")
+	log.Write("这里的 CmdArgs 是: ", "容器ID: ", args.ContainerID)
+	log.Write("网络命名空间: ", args.Netns)
+	log.Write("网卡名称: ", args.IfName)
+	log.Write("环境变量: ", args.Args)
+	log.Write("路径: ", args.Path)
+	log.Write("输入数据: ", string(args.StdinData))
 
 	return nil
 }
 
 func Check(args *skel.CmdArgs) error {
 	log.Write("进入到 cmdCheck")
-	log.Write(
-		"这里的 CmdArgs 是: ", "ContainerID: ", args.ContainerID,
-		"Netns: ", args.Netns,
-		"IfName: ", args.IfName,
-		"Args: ", args.Args,
-		"Path: ", args.Path,
-		"StdinData: ", string(args.StdinData))
+	log.Write("这里的 CmdArgs 是: ", "容器ID: ", args.ContainerID)
+	log.Write("网络命名空间: ", args.Netns)
+	log.Write("网卡名称: ", args.IfName)
+	log.Write("环境变量: ", args.Args)
+	log.Write("路径: ", args.Path)
+	log.Write("输入数据: ", string(args.StdinData))
+
 	return nil
 }
 func Del(args *skel.CmdArgs) error {
-	log.Write("进入到 cmdDel")
-	log.Write(
-		"这里的 CmdArgs 是: ", "ContainerID: ", args.ContainerID,
-		"Netns: ", args.Netns,
-		"IfName: ", args.IfName,
-		"Args: ", args.Args,
-		"Path: ", args.Path,
-		"StdinData: ", string(args.StdinData))
+	log.Write("进入到 cmdCheck")
+	log.Write("这里的 CmdArgs 是: ", "容器ID: ", args.ContainerID)
+	log.Write("网络命名空间: ", args.Netns)
+	log.Write("网卡名称: ", args.IfName)
+	log.Write("环境变量: ", args.Args)
+	log.Write("路径: ", args.Path)
+	log.Write("输入数据: ", string(args.StdinData))
 	return nil
 }
 
