@@ -2,13 +2,13 @@ package log
 
 import (
 	"fmt"
-	"os"
+	"io/ioutil"
 )
 
-var DefaultPath = "/var/log/cni/data.log"
+var DefaultPath = "/var/log/cni/cni.log"
 
 func Write(args ...interface{}) {
-	file, _ := os.Open(DefaultPath)
-	defer file.Close()
-	_, _ = file.Write([]byte(fmt.Sprintln(args)))
+	if err := ioutil.WriteFile(DefaultPath, []byte(fmt.Sprintln(args)), 0666); err != nil {
+		fmt.Println(err)
+	}
 }

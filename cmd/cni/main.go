@@ -44,5 +44,6 @@ func Del(args *skel.CmdArgs) error {
 }
 
 func main() {
+	log.Write("hello cni")
 	skel.PluginMain(Add, Check, Del, version.All, buildversion.BuildString("test-cni"))
 }
